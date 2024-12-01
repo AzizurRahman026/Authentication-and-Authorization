@@ -38,3 +38,30 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 app.UseAuthentication();
 app.UseAuthorization();
 ```
+## 4. Create Model
+
+```cpp
+// RegisterDTO.cs
+namespace Core.Entities.DTO
+{
+    public class RegisterDTO
+    {
+        public required string Username { get; set; }
+        public required string Password { get; set; }
+        public required string Role { get; set; }
+    }
+}
+
+// LoginDTO.cs
+namespace Core.Entities.DTO
+{
+    public class LoginDTO
+    {
+        public required string Username { get; set; }
+        public required string Password { get; set; }
+    }
+}
+
+
+```
+
