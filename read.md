@@ -76,3 +76,26 @@ namespace Core.Entities.DTO
 
 ```
 
+## 5. Create a UserController
+```cpp
+using Core.Entities.DTO;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+
+namespace ECommerseApp.Controllers
+{
+    [ApiController]
+    [Authorize]  // Apply to all actions in this controller
+    public class UserController : Controller
+    {
+        [HttpPost("user/register")]
+        [AllowAnonymous]  // Allow anonymous access to registration
+        public async Task<IActionResult> RegisterUser([FromBody] RegisterDTO user)
+        {
+            Console.WriteLine(user.Username + " " + user.Password + " " + user.Role);
+            return Ok("Register UI");
+        }
+    }
+}
+
+```
