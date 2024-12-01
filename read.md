@@ -9,7 +9,7 @@ System.IdentityModel.Tokens.Jwt
 
 ## 2. Update setting in appsetting.json
 
-```
+```cpp
 "JWT": {
     "Key": "SuperSecretKeyAssalamuAlikumOyarRahmatullahiOyaBarakatullahAlhamdulillahItisW",
     "Issuer": "http://localhost:27017",
@@ -19,7 +19,7 @@ System.IdentityModel.Tokens.Jwt
 
 ## 3. Register JWT token for Authentication in Program.cs file
 
-```
+```cpp
 // Add JWT Authentication configuration
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
@@ -30,5 +30,5 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             ValidateIssuer = false,
             ValidateAudience = false
         };
-    });
+});
 ```
