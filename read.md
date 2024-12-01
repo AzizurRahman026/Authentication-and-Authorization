@@ -19,6 +19,7 @@ System.IdentityModel.Tokens.Jwt
 
 ## 3. Register JWT token for Authentication in Program.cs file
 
+```
 // Add JWT Authentication configuration
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
@@ -30,4 +31,4 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             ValidateAudience = false
         };
     });
-
+```
