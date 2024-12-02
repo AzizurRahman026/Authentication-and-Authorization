@@ -369,5 +369,6 @@ namespace ECommerseApp.Controllers
 }
 ```
 
+![Postman api call screen shot for role based authentication](https://github.com/user-attachments/assets/7e1f086c-34b2-4657-be45-603568f73fd6)
 
 
